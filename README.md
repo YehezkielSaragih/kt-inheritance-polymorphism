@@ -28,7 +28,7 @@ src/
   Creates a list of animals (`Dog`, `Cat`, `Animal`) and demonstrates polymorphism:  
   each object calls its own `speak()` implementation.
 
-## Example Output
+## 🔎 Example Output
 
 Buddy barks: Woof woof!
 Kitty meows: Meow~

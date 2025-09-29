@@ -1,9 +1,14 @@
+import model.Animal
+import model.Cat
+import model.Dog
+
 fun main() {
-    // Polymorphism: variabel tipe Animal bisa menyimpan objek Dog atau Cat
+
+    // Polymorphism: variabel tipe model.Animal bisa menyimpan objek model.Dog atau model.Cat
     val animals: List<Animal> = listOf(
         Dog("Buddy"),
         Cat("Kitty"),
-        Animal("Generic Animal")
+        Animal("Generic model.Animal")
     )
 
     // Polymorphism in action: method speak() dipanggil sesuai jenis object

@@ -1,3 +1,5 @@
+package model
+
 // Child class (inheritance)
 class Dog(name: String) : Animal(name) {
     override fun speak() {

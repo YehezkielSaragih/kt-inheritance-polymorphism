@@ -1,44 +1,43 @@
 # Kotlin OOP Example: Inheritance & Polymorphism
 
-This project is a simple example of **Object-Oriented Programming (OOP)** in Kotlin, demonstrating **inheritance** and **polymorphism** using `Animal`, `Dog`, and `Cat` classes.
+A simple project to demonstrate **Object-Oriented Programming (OOP)** concepts in Kotlin, covering:
+
+- **Inheritance**
+- **Polymorphism**
+- **Method Overriding**
+- **Method Overloading**
+- **Default equals() behavior**
 
 ## 📂 Project Structure
 
 ```
 src/
-├── Animal.kt # Base class (superclass)
-├── Dog.kt # Subclass of Animal
-├── Cat.kt # Subclass of Animal
-└── Main.kt # Entry point of the program
+├── model/
+│ ├── Animal.kt # Superclass dengan protected property + overloading
+│ ├── Dog.kt # Subclass dari Animal (override speak)
+│ └── Cat.kt # Subclass dari Animal (override speak)
+└── Main.kt # Entry point program
 ```
 
 ## 📝 Explanation
 
-- **`Animal`**  
-  Base class, marked as `open` so it can be inherited.  
-  Has a function `speak()` that can be overridden.
+### 🔹 `Animal.kt`
+- Declared as `open class` so it can be inherited.
+- `name` property is `protected` → accessible to subclasses but not from outside the class.
+- `speak()` → default method.
+- `speak(loop: Int)` → demonstrates **method overloading**.
+- `greet()` → introduces the animal by name.
 
-- **`Dog`**  
-  Inherits from `Animal` and overrides the `speak()` function.
+### 🔹 `Dog.kt` and `Cat.kt`
+- Inherit from `Animal`.
+- Override the `speak()` method → **method overriding**.
+- Override `speak(loop: Int)` → add custom behavior with looped output.
 
-- **`Cat`**  
-  Also inherits from `Animal` and overrides the `speak()` function.
-
-- **`Main`**  
-  Creates a list of animals (`Dog`, `Cat`, `Animal`) and demonstrates polymorphism:  
-  each object calls its own `speak()` implementation.
-
-## Example Output
-
-Buddy barks: Woof woof!
-Kitty meows: Meow~
-Generic Animal makes a sound
-
-## 📚 Concepts Shown
-
-- Inheritance → Dog and Cat extend Animal.
-- Polymorphism → Animal type can hold different object types, but method calls behave according to the actual object instance.
-- Override → speak() is overridden in subclasses to provide different behaviors.
+### 🔹 `Main.kt`
+- Creates a list of `Animal` containing `Dog`, `Cat`, and `Animal`.
+- Demonstrates **polymorphism**: the `speak()` method runs based on the actual object type.
+- Checks equality with default `equals()` (compares references, not values).
+- Runs `speak(loop: Int)` to show **method overloading**.
 
 ## 👨‍💻 Authors
 

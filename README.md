@@ -4,11 +4,13 @@ This project is a simple example of **Object-Oriented Programming (OOP)** in Kot
 
 ## 📂 Project Structure
 
+```
 src/
 ├── Animal.kt # Base class (superclass)
 ├── Dog.kt # Subclass of Animal
 ├── Cat.kt # Subclass of Animal
 └── Main.kt # Entry point of the program
+```
 
 ## 📝 Explanation
 
